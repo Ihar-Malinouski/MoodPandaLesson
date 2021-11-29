@@ -26,6 +26,7 @@ public class BaseTest {
         Configuration.timeout = 20000;
         Configuration.holdBrowserOpen = true;
         Configuration.headless = false;
+
         feedPage = new FeedPage();
         loginPage = new LoginPage();
         moodUpdateModalPage = new MoodUpdateModalPage();

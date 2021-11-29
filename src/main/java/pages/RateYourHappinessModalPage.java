@@ -1,11 +1,11 @@
 package pages;
 
-import constains.IConstains;
+import constants.IConstants;
 import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class RateYourHappinessModalPage implements IConstains {
+public class RateYourHappinessModalPage implements IConstants {
 
     public static final String SLIDER_CSS = ".ui-slider-handle";
     public static final String UPDATE_MOOD_BUTTON_CSS = ".btn-primary.ButtonUpdate";

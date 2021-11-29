@@ -27,7 +27,7 @@ public class FeedPage {
         return new RateYourHappinessModalPage();
     }
 
-    public static String getNumberMood() {
+    public static String getFirstMoodNumber() {
         return $$(NUMBER_MOOD_CSS).get(0).getText();
     }
 
@@ -35,7 +35,7 @@ public class FeedPage {
         return $$(DATE_MOOD_CSS).get(0).getText();
     }
 
-    public FeedPage getReplyMessgeMood(String text) {
+    public FeedPage getFirstMoodReplyMessage(String text) {
         $$(REPLY_WINDOW_CSS).get(0).sendKeys(text);
         return this;
     }
@@ -45,7 +45,7 @@ public class FeedPage {
         return this;
     }
 
-    public static String getReplyText() {
+    public static String getFirstReplyText() {
         return $$(REPLY_TEXT_CSS).get(0).getText();
     }
 }

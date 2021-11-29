@@ -1,6 +1,6 @@
-package constains;
+package constants;
 
-public interface IConstains {
+public interface IConstants {
 
     String LOGIN_URL = "https://moodpanda.com/Login/";
 }

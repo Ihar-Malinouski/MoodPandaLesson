@@ -16,7 +16,7 @@ public class RateYourHappinessModalStep {
         rateYourHappinessModalPage = new RateYourHappinessModalPage();
     }
 
-    public static MoodUpdateModalPage updateButtonAndClickButton() {
+    public static MoodUpdateModalPage updateMoodAndGoToMyDiary() {
         RateYourHappinessModalPage.updateMoodBuutonClick()
                 .clickGoToMyDiaryButton();
         return new MoodUpdateModalPage();

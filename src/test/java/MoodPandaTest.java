@@ -12,8 +12,8 @@ public class MoodPandaTest extends BaseTest {
         LoginStep.authotization();
         FeedStep.waitAndClickMoodButton()
                 .updateMood(6);
-        RateYourHappinessModalStep.updateButtonAndClickButton();
-        Assert.assertEquals("6", FeedPage.getNumberMood());
+        RateYourHappinessModalStep.updateMoodAndGoToMyDiary();
+        Assert.assertEquals(FeedPage.getFirstMoodNumber(), "6");
     }
 
     @Test(description = "Проверка сохранения с верной измененной датой при заполнении настроения")
@@ -24,8 +24,8 @@ public class MoodPandaTest extends BaseTest {
                 .choiceDateInMoodModalPage()
                 .choiceHoursTime("7 pm")
                 .choiceMinutesTime(":30");
-        RateYourHappinessModalStep.updateButtonAndClickButton();
-        Assert.assertEquals("2 days ago", FeedPage.getDateMood());
+        RateYourHappinessModalStep.updateMoodAndGoToMyDiary();
+        Assert.assertEquals(FeedPage.getDateMood(), "2 days ago");
     }
 
     @Test(description = "Проверка ввода Reply под оценкой настроения")
@@ -37,9 +37,9 @@ public class MoodPandaTest extends BaseTest {
                 .choiceMount("Apr")
                 .openYearCalendarButton()
                 .choiceYear("2015");
-        RateYourHappinessModalStep.updateButtonAndClickButton();
-        feedPage.getReplyMessgeMood("Чот настроенице такое себе :)")
+        RateYourHappinessModalStep.updateMoodAndGoToMyDiary();
+        feedPage.getFirstMoodReplyMessage("Чот настроенице такое себе :)")
                 .clickReplyButton();
-        Assert.assertEquals("Чот настроенице такое себе :)", FeedPage.getReplyText());
+        Assert.assertEquals(FeedPage.getFirstReplyText(), "Чот настроенице такое себе :)");
     }
 }
