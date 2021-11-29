@@ -34,22 +34,22 @@ public class RateYourHappinessModalPage implements IConstants {
         return this;
     }
 
-    public static MoodUpdateModalPage updateMoodBuutonClick() {
+    public static MoodUpdateModalPage updateMoodButtonClick() {
         $(UPDATE_MOOD_BUTTON_CSS).click();
         return new MoodUpdateModalPage();
     }
 
-    public RateYourHappinessModalPage choiceDateInMoodModalPage() {
+    public RateYourHappinessModalPage chooseDate() {
         $(DATE_MOOD_CSS).click();
         return this;
     }
 
-    public RateYourHappinessModalPage choiceHoursTime(String time) {
+    public RateYourHappinessModalPage chooseHoursTime(String time) {
         $(HOURS_TIME_MOOD_CSS).selectOptionContainingText(time);
         return this;
     }
 
-    public RateYourHappinessModalPage choiceMinutesTime(String minutes) {
+    public RateYourHappinessModalPage chooseMinutesTime(String minutes) {
         $(MINUTES_TIME_MOOD_CSS).selectOptionContainingText(minutes);
         return this;
     }
@@ -59,17 +59,17 @@ public class RateYourHappinessModalPage implements IConstants {
         return this;
     }
 
-    public RateYourHappinessModalPage choiceMount(String mount) {
-        $(OPEN_MONTH_BUTTON_CSS).selectOptionContainingText(mount);
+    public RateYourHappinessModalPage chooseMonth(String month) {
+        $(OPEN_MONTH_BUTTON_CSS).selectOptionContainingText(month);
         return this;
     }
 
-    public RateYourHappinessModalPage openYearCalendarButton() {
+    public RateYourHappinessModalPage openYearCalendar() {
         $(OPEN_YEAR_BUTTON_CSS).click();
         return this;
     }
 
-    public RateYourHappinessModalPage choiceYear(String year) {
+    public RateYourHappinessModalPage chooseYear(String year) {
         $(OPEN_YEAR_BUTTON_CSS).selectOptionContainingText(year);
         return this;
     }

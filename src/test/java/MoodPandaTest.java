@@ -21,9 +21,9 @@ public class MoodPandaTest extends BaseTest {
         LoginStep.authotization();
         FeedStep.waitAndClickMoodButton()
                 .updateMood(4)
-                .choiceDateInMoodModalPage()
-                .choiceHoursTime("7 pm")
-                .choiceMinutesTime(":30");
+                .chooseDate()
+                .chooseHoursTime("7 pm")
+                .chooseMinutesTime(":30");
         RateYourHappinessModalStep.updateMoodAndGoToMyDiary();
         Assert.assertEquals(FeedPage.getDateMood(), "2 days ago");
     }
@@ -34,9 +34,9 @@ public class MoodPandaTest extends BaseTest {
         FeedStep.waitAndClickMoodButton()
                 .updateMood(4)
                 .openCalendarButton()
-                .choiceMount("Apr")
-                .openYearCalendarButton()
-                .choiceYear("2015");
+                .chooseMonth("Apr")
+                .openYearCalendar()
+                .chooseYear("2015");
         RateYourHappinessModalStep.updateMoodAndGoToMyDiary();
         feedPage.getFirstMoodReplyMessage("Чот настроенице такое себе :)")
                 .clickReplyButton();
