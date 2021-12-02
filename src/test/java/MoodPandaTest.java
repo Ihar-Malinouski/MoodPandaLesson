@@ -60,6 +60,6 @@ public class MoodPandaTest extends BaseTest {
         RateYourHappinessModalStep.updateMoodAndGoToMyDiary();
         feedPage.getFirstMoodReplyMessage("Чот настроенице такое себе :)")
                 .clickReplyButton();
-        Assert.assertEquals(FeedPage.getFirstReplyText(), "Чот настроенице такое себе :)");
+         Assert.assertEquals(FeedPage.getFirstReplyText(), "Чот настроенице такое себе :)");
     }
 }
