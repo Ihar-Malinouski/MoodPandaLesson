@@ -12,7 +12,7 @@ import steps.RateYourHappinessModalStep;
 
 public class MoodPandaTest extends BaseTest {
 
-    @Test(description = "Проверка валидности выбранного значения настроения")
+    @Test(description = "Checking the validity of the selected mood value")
     @Description("Some detailed test description")
     @Parameters({"login", "password", "secondNameProduct"})
     @Link("TMS-1")
@@ -26,7 +26,7 @@ public class MoodPandaTest extends BaseTest {
         Assert.assertEquals(FeedPage.getFirstMoodNumber(), "6");
     }
 
-    @Test(description = "Проверка сохранения с верной измененной датой при заполнении настроения")
+    @Test(description = "Checking save with correct modified date when filling in mood")
     @Description("Some detailed test description")
     @Parameters({"login", "password", "secondNameProduct"})
     @Link("TMS-1")
@@ -43,7 +43,7 @@ public class MoodPandaTest extends BaseTest {
         Assert.assertEquals(FeedPage.getDateMood(), "1 day ago");
     }
 
-    @Test(description = "Проверка ввода Reply под оценкой настроения")
+    @Test(description = "Reply Input Validation Under Mood Assessment")
     @Description("Some detailed test description")
     @Parameters({"login", "password", "secondNameProduct"})
     @Link("TMS-1")
