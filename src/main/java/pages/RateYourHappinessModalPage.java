@@ -1,6 +1,7 @@
 package pages;
 
 import constants.IConstants;
+import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -34,35 +35,42 @@ public class RateYourHappinessModalPage implements IConstants {
         return this;
     }
 
+    @Step("Click the UPDATE button on a page RateYourHappinessModalPage")
     public static MoodUpdateModalPage updateMoodButtonClick() {
         $(UPDATE_MOOD_BUTTON_CSS).click();
         return new MoodUpdateModalPage();
     }
 
+    @Step("Change of date on a page RateYourHappinessModalPage")
     public RateYourHappinessModalPage chooseDate() {
         $(DATE_MOOD_CSS).click();
         return this;
     }
 
+    @Step("Change hours on a page RateYourHappinessModalPage on the value '{time}'")
     public RateYourHappinessModalPage chooseHoursTime(String time) {
         $(HOURS_TIME_MOOD_CSS).selectOptionContainingText(time);
         return this;
     }
 
+    @Step("Change minutes on a page RateYourHappinessModalPage on the value '{minutes}'")
     public RateYourHappinessModalPage chooseMinutesTime(String minutes) {
         $(MINUTES_TIME_MOOD_CSS).selectOptionContainingText(minutes);
         return this;
     }
 
+    @Step("Opening the calendar")
     public RateYourHappinessModalPage openCalendarButton() {
         $(OPEN_CALENDAR_BUTTON_CSS).click();
         return this;
     }
 
+    @Step("Change mount on a page RateYourHappinessModalPage on the value '{month}'")
     public RateYourHappinessModalPage chooseMonth(String month) {
         $(OPEN_MONTH_BUTTON_CSS).selectOptionContainingText(month);
         return this;
     }
+
 
     public RateYourHappinessModalPage openYearCalendar() {
         $(OPEN_YEAR_BUTTON_CSS).click();
